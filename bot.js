@@ -30,7 +30,10 @@ client.on('message', message => {
   }
 
   if (message.content === '!react') {
-    message.react('🇪');
+    message.react('🇪')
+      .then(() => message.react('🇱'))
+      .then(()=> message.react('🇮'))
+      .catch(() => message.channel.send('One of the emojis failed to react.'));
   }
 });
 
