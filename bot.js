@@ -18,10 +18,11 @@ client.on('message', message => {
   const user = 'TimmyTurnt#9366';
   if (message.author.id === '140253409046560768') {
     // mention user TimmyTurnt
-
-    message.channel.send('<@140253409046560768>');
+    var interval = setTimeout(() => {
+      message.channel.send('<@140253409046560768>');
+    }, 5000);
   }
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login('token');
+client.login('NjIxOTM3NzE3OTMyMDY0Nzg5.XaUUcg.yyXtelVwuZfriU7Pq6HdjvSscXM');
