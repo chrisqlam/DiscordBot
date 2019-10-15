@@ -15,11 +15,11 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is from Charmander bot ping user Eli
-  if (message.author.id === '177931388115222528') {
-    var interval = setTimeout(() => {
-      message.channel.send('<@177931388115222528>');
-    }, 15000);
-  }
+  // if (message.author.id === '177931388115222528') {
+  //   var interval = setTimeout(() => {
+  //     message.channel.send('<@177931388115222528>');
+  //   }, 15000);
+  // }
 
   if (message.content.includes("565008620320849930")) {
     message.react('499898499639279626');
@@ -27,6 +27,10 @@ client.on('message', message => {
 
   if (message.content === '!ping') {
     message.channel.send('pong');
+  }
+
+  if (message.content === '!react') {
+    message.react('🇪');
   }
 });
 
