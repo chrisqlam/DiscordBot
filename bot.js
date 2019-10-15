@@ -29,7 +29,7 @@ client.on('message', message => {
     message.channel.send('pong');
   }
 
-  if (message.content === '!react') {
+  if (message.author.id === '177931388115222528') {
     message.react('🇪')
       .then(() => message.react('🇱'))
       .then(()=> message.react('🇮'))
