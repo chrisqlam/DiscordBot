@@ -15,12 +15,19 @@ client.on('ready', () => {
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is from Charmander bot ping user Eli
-
   if (message.author.id === '177931388115222528') {
     // mention user TimmyTurnt
     var interval = setTimeout(() => {
       message.channel.send('<@177931388115222528>');
     }, 15000);
+  }
+
+  if (message.content.includes(":moon2b:")) {
+    message.react('<:Nanners:499898499639279626>');
+  }
+
+  if (message.content === '!ping') {
+    message.channel.send('pong');
   }
 });
 
