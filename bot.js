@@ -21,7 +21,7 @@ client.on('message', message => {
     }, 15000);
   }
 
-  if (message.content.includes(":moon2b:")) {
+  if (message.content.includes("565008620320849930")) {
     message.react('499898499639279626');
   }
 
