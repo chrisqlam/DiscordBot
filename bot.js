@@ -14,12 +14,12 @@ client.on('ready', () => {
 
 // Create an event listener for messages
 client.on('message', message => {
-  // If the message is from user TimmyTurnt
-  const user = 'TimmyTurnt#9366';
-  if (message.author.id === '140253409046560768') {
+  // If the message is from Charmander bot ping user Eli
+
+  if (message.author.id === '620121354645274644') {
     // mention user TimmyTurnt
     var interval = setTimeout(() => {
-      message.channel.send('<@140253409046560768>');
+      message.channel.send('<@177931388115222528>');
     }, 15000);
   }
 });
