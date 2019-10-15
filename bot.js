@@ -25,4 +25,4 @@ client.on('message', message => {
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login('NjIxOTM3NzE3OTMyMDY0Nzg5.XaUUcg.yyXtelVwuZfriU7Pq6HdjvSscXM');
+client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
