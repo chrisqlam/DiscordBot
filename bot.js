@@ -20,7 +20,7 @@ client.on('message', message => {
     // mention user TimmyTurnt
     var interval = setTimeout(() => {
       message.channel.send('<@140253409046560768>');
-    }, 5000);
+    }, 15000);
   }
 });
 
