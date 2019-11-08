@@ -46,9 +46,6 @@ client.on('message', message => {
     message.channel.send('You are now subbed to Jovi');
   }
 
-  const hook = new Discord.WebhookClient(process.env.WEB_ID, process.env.WEB_TOKEN);
-
-  hook.send('I am alive');
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
