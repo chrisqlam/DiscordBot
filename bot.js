@@ -35,6 +35,12 @@ client.on('message', message => {
       .then(()=> message.react('🇮'))
       .catch(() => message.channel.send('One of the emojis failed to react.'));
   }
+
+  if (message.content === "!jovisub") {
+    const guildMember = message.member;
+    guildMember.addRole('642190113324924949');
+    message.channel.send('You are now subbed to Jovi');
+  }
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
