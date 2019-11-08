@@ -21,14 +21,17 @@ client.on('message', message => {
   //   }, 15000);
   // }
 
+  //reacts to :moon2B:
   if (message.content.includes("565008620320849930")) {
     message.react('499898499639279626');
   }
 
+  //test command
   if (message.content === '!ping') {
     message.channel.send('pong');
   }
 
+  //if eli sends a message react with E L I
   if (message.author.id === '177931388115222528') {
     message.react('🇪')
       .then(() => message.react('🇱'))
@@ -36,11 +39,16 @@ client.on('message', message => {
       .catch(() => message.channel.send('One of the emojis failed to react.'));
   }
 
+  //adds role to members who wish to recieve notifactions when Jovi streams
   if (message.content === "!jovisub") {
     const guildMember = message.member;
     guildMember.addRole('642190113324924949');
     message.channel.send('You are now subbed to Jovi');
   }
+
+  const hook = new Discord.WebhookClient(process.env.WEB_ID, process.env.WEB_TOKEN);
+
+  hook.send('I am alive');
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
