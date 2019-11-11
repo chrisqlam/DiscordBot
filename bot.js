@@ -54,6 +54,8 @@ client.on('message', message => {
   if (message.content === "!hook") {
     message.channel.send();
   }
+
+  twitchHook.send('hello')
   
   
 });
