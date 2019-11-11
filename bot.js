@@ -35,7 +35,7 @@ client.on('message', message => {
   //adds role to members who wish to recieve notifactions when Jovi streams
   if (message.content === "!jovisub") {
     const guildMember = message.member;
-    if (guildMember.roles.has(642190113324924949)){
+    if (guildMember.roles.has('642190113324924949')){
       guildMember.removeRole('642190113324924949')
       message.channel.send('You have unsubbed to Jovi')
     }
