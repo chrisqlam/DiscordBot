@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 
 //Webhook
-//const twitchHook = new Discord.WebhookClient()
+const twitchHook = new Discord.WebhookClient(process.env.WEB_ID, process.env.WEB_TOKEN)
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -52,7 +52,7 @@ client.on('message', message => {
   }
 
   if (message.content === "!hook") {
-    message.channel.send(process.env.WEB_ID + " " + process.env.WEB_TOKEN);
+    message.channel.send();
   }
   
   
