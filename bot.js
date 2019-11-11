@@ -1,5 +1,7 @@
 // Import the discord.js module
 const Discord = require('discord.js');
+//https://api.twitch.tv/helix/streams?user_id=31610722 jovi
+
 
 //Webhook
 const twitchHook = new Discord.WebhookClient(process.env.WEB_ID, process.env.WEB_TOKEN)
@@ -55,7 +57,8 @@ client.on('message', message => {
     message.channel.send();
   }
 
-  twitchHook.send('hello')
+
+  
   
   
 });
