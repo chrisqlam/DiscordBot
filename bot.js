@@ -14,13 +14,6 @@ client.on('ready', () => {
 
 // Create an event listener for messages
 client.on('message', message => {
-  // If the message is from Charmander bot ping user Eli
-  // if (message.author.id === '177931388115222528') {
-  //   var interval = setTimeout(() => {
-  //     message.channel.send('<@177931388115222528>');
-  //   }, 15000);
-  // }
-
   //reacts to :moon2B:
   if (message.content.includes("565008620320849930")) {
     message.react('499898499639279626');
@@ -42,8 +35,14 @@ client.on('message', message => {
   //adds role to members who wish to recieve notifactions when Jovi streams
   if (message.content === "!jovisub") {
     const guildMember = message.member;
+    if (guildMember.roles.has(642190113324924949)){
+      guildMember.removeRole('642190113324924949')
+      message.channel.send('You have unsubbed to Jovi')
+    }
+    else {
     guildMember.addRole('642190113324924949');
     message.channel.send('You are now subbed to Jovi');
+    }
   }
 
 });
