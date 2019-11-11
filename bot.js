@@ -1,6 +1,9 @@
 // Import the discord.js module
 const Discord = require('discord.js');
 
+//Webhook
+//const twitchHook = new Discord.WebhookClient()
+
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
@@ -11,6 +14,8 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log('I am ready!');
 });
+
+
 
 // Create an event listener for messages
 client.on('message', message => {
@@ -35,6 +40,7 @@ client.on('message', message => {
   //adds role to members who wish to recieve notifactions when Jovi streams
   if (message.content === "!jovisub") {
     const guildMember = message.member;
+    //removes the role if you already have the role
     if (guildMember.roles.has('642190113324924949')){
       guildMember.removeRole('642190113324924949')
       message.channel.send('You have unsubbed to Jovi')
@@ -45,6 +51,11 @@ client.on('message', message => {
     }
   }
 
+  if (message.content === "!hook") {
+    message.channel.send(process.env.WEB_ID + " " + process.env.WEB_TOKEN);
+  }
+  
+  
 });
 
 // Log our bot in using the token from https://discordapp.com/developers/applications/me
